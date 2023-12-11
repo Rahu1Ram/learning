@@ -1,0 +1,438 @@
+<!--What is HTML?
+        1.HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure the web pages you visit.
+        2.HTML consists of a series of elements
+        3.HTML elements tell the browser how to display the content
+        4.HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc. -->
+
+<!DOCTYPE html>
+    <!--1.At biginning doctypes were meant to act as links to a set of rules that the HTML page had to follow. 
+        2.Now, The <!DOCTYPE html> declaration defines VERSION of this document i.e. HTML5 document. -->
+<html lang="en">
+    <!-- 1.The <html> element is the root element of an HTML page -->
+    <head>
+            <!-- 1.The <head> element contains 
+                *Meta Data.
+                *SEO(Search Engine Optimization)
+                *Favicons.
+                *Title 
+                *Links for CSS and JavaScript.-->
+
+        <meta charset="UTF-8">
+            <!-- Specifies the character encoding of the document. UTF-8 is a widely used encoding that supports a broad range of characters. -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Helps make web pages responsive on various devices by setting the initial viewport scale. -->
+        <meta name="author" content="Your Name">
+            <!-- Indicates the author of the webpage. -->
+        <meta name="description" content="Description of your webpage">
+            <!-- Provides a brief description of the webpage's content. This description is often used by search engines. -->
+        <meta name="keywords" content="keyword1, keyword2, keyword3">
+            <!-- Specifies keywords or phrases related to the content of the webpage. These were more important in the past for search engines but have diminished in importance. -->
+        <meta name="robots" content="index, follow">
+            <!-- Instructs web crawlers how to treat your webpage. "Index" allows it to be indexed by search engines, and "follow" allows the crawler to follow links on the page. -->
+        
+        <link rel="shortcut icon" href="attechment\fav.ico" type="image/x-icon">
+                <!-- specifies logo of title in HTML page. -->
+        <title>HTML-5</title>
+            <!--1.The <title> element specifies a title for the HTML page.
+                2.which is shown in the browser's title bar or in the page's tab -->
+    </head>
+    <body>
+        <!--1.The <body> element defines the document's body, and is a container for all the visible contents.
+            2.such as headings, paragraphs, images, hyperlinks, tables, lists, etc. -->   
+        
+        <!-- TAGS are used for:-
+                1.structure.
+                2.sementic or meaning.
+                3.formatting. -->
+
+        <nav>
+            <h2>Topic To Be Covered :-</h2>
+            <ul>
+                <li><a href="#semantic1">Basic sementic Tags</a></li>
+                <li><a href="#table1">Table</a></li>
+                <li><a href="#format1">Formatting Tags.</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+
+        <section id="semantic1">
+            <p>This is my first Paragraph</p>
+            <!--1.The <p> element defines a paragraph -->
+
+            <h1>This is first  heading.</h1>
+            <h2>This is second  heading.</h2>
+            <h3>This is third  heading.</h3>
+            <h4>This is fourth  heading.</h4>
+            <h5>This is five  heading.</h5>
+            <h6>This is six  heading.</h6>
+                <!--1.The <h> element defines a heading.
+                    2.h1 to h6 defines larger to smaller heading type respectively.-->
+
+            <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">Click to reach mozilla page</a>
+                <!--1.<a> for anchor. An anchor can make the text it encloses into a hyperlink. 
+                    2.Anchors can take a number of attributes(-contain extra information about the element) are as follows:
+                    3.href
+                        *This attribute's value specifies the web address for the link.
+                        *For example: href="https://www.mozilla.org/".
+                    4.title
+                        *The title attribute specifies extra information about the link.
+                        *Such as a description of the page that is being linked to. 
+                        *For example, title="The Mozilla homepage". 
+                        *This appears as a tooltip when a cursor hovers over the element.
+                    5.target
+                        *The target attribute specifies the browsing context used to display the link. 
+                        *For example, target="_blank" will display the link in a new tab.  -->
+
+            <ul>
+                <li>Kumar</li>
+                <li>Rahul</li>
+                <li>Ram</li>
+            </ul>
+                <!--1.The <ul> element is for grouping a collection of items that do not have a numerical ordering, and their order in the list is meaningless.
+                    2.Typically, unordered-list items are displayed with a bullet, which can be of several forms, like a dot, a circle, or a square -->
+            
+            <ol>
+                <li>Boil the water.</li>
+                <li>add sugar, tea, milk.</li>
+                <li>enjoy your tea</li>
+            </ol>
+                <!--1.The <ol> element is for grouping a collection of items that have a numerical or letter ordering, and has semantics.
+                    2.The <ol> and <ul> elements may NEST AS DEEPLY AS DESIRE, alternating between <ol> and <ul> however you like. -->
+        </section>
+        
+        <table border="1" id="table1">
+            <thead>
+                <tr>
+                    <th rowspan="3">Day</th>
+                    <th colspan="3">Seminar</th>
+                </tr>
+                <tr>
+                    <th colspan="2">Schedule</th>
+                    <th rowspan="2">Topic</th>
+                </tr>
+                <tr>
+                    <th>Begin</th>
+                    <th>End</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Monday</td>
+                    <td rowspan="2">8:00 am</td>
+                    <td rowspan="2">5:00 pm</td>
+                    <td>introduction to XML</td>
+                </tr>
+                <tr>
+                    <td>validity DTD and Relax NG</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Tuesday</td>
+                    <td>8:00am</td>
+                    <td>11:00am</td>
+                    <td>XPath</td>
+                </tr>
+                <tr>
+                    <td>11:00am</td>
+                    <td>2:00pm</td>
+                    <td rowspan="2">XSL Transformations</td>
+                </tr>
+                <tr>
+                    <td>2:00pm</td>
+                    <td>5:00pm</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>8:00am</td>
+                    <td>12:00pm</td>
+                    <td>XSL formatting Objects</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--1.A <table> in HTML consists of table cells inside rows<tr> and columns<td>.
+            2.It has 3 part table-header<thead>, table-body<tbody>, table-footer<tfoot>.
+        Atrributes
+            1.align
+                left: margin-right: auto; margin-left: 0;
+                center: margin-right: auto; margin-left: auto;
+                right: margin-right: 0; margin-left: auto;
+            2.bgcolor
+            3.border
+            4.rowspan, colspan
+            5.cellpadding, cellspacing
+            6.frame 
+            7.width
+            8.summary
+        Rules
+            1.none, which indicates that no rules will be displayed; it is the default value;
+            2.groups, which will cause the rules to be displayed between row groups (defined by the <thead>, <tbody> and <tfoot> elements) and between column groups (defined by the <col> and <colgroup> elements) only;
+            3.rows, which will cause the rules to be displayed between rows;
+            4.cols, which will cause the rules to be displayed between columns;
+            5.all, which will cause the rules to be displayed between rows and columns. -->
+
+        <img src="attechment\html-attributes.jpg" alt="Image defination">
+            <!--The <img> HTML element embeds an image into the document
+                Attributes
+                    1."src"-contains the path to the image you want to embed.
+                    2."alt"-holds a text description of the image, which isn't mandatory but is incredibly useful for accessibility — screen readers
+                    3."align"
+                    4.Aspect ratio computed from "width" and "height" attributes.
+                    5.Responsive image hints with "sizes" and "srcset".
+                    6.for security and privacy: see "crossorigin" , "decoding" , "fetchpriority" and "referrerpolicy".
+                    7."border" , "hspace" , "ismap" and "usemap".
+                    8."longdesc" , "loading" , "name" and "oneerror".-->
+
+        <h1 style="background-color: aqua;">this is a style tag for background-color</h1>
+        <h2 style="color:brown;">this is a style tag for text-color</h2>
+            <!-- We cover style element in depth in CSS -->
+
+        <p id="format1"><b>Lorem</b> ipsum dolor sit, amet <u>consectetur</u> adipisicing elit.<br> <i>Quo numquam iusto</i>, error suscipit <s>laudantium</s> cupiditate cum? </br>Minima ducimus <strong>repellat</strong> itaque libero saepe <em>sapiente</em> reiciendis optio? Eum eligendi quae a pariatur?</p>
+            <!--1.<b> element is used to draw the reader's attention to granted special importance.
+                2.<em> to indicate stress emphasis.
+                3.<strong> to indicate importance, seriousness, or urgency.
+                4.<mark> to indicate relevance.
+                5.<cite> to mark up the name of a work, such as a book, play, or song.
+                6.<dfn> to mark up the defining instance of a term.
+                7.<s> element to represent things that are no longer relevant or no longer accurate
+                8.<br> HTML element produces a line break in text.(Opening and Closing tag i.e. <br> and </br> work as same.) -->
+        
+        <P>
+            2<sup>5</sup></P></br>
+            O<sub>2</sub>
+        </P>
+        <!--1.<sup> tag is used for super-script.
+            2.<sub> tag is used for sub-script. -->
+
+        <pre>
+            my 
+            name 
+            is 
+            rahul
+            ram.      i live in jharkhand.
+        </pre>
+            <!-- 1.<pre> element represents preformatted text which is to be presented exactly as written in the HTML file. -->
+
+        <article class="forecast">
+            <h1>Weather forecast for Seattle</h1>
+            <article >
+                <h2>03 March 2018</h2>
+                <p>Rain.</p>
+            </article>
+            <article >
+                <h2>04 March 2018</h2>
+                <p>Periods of rain.</p>
+            </article>
+            <article >
+                <h2>05 March 2018</h2>
+                <p>Heavy rain.</p>
+            </article>
+        </article>
+
+        <h1>Choosing an Apple</h1>
+        <section>
+            <h2>Introduction</h2>
+            <p>This document provides a guide to help with the important task of choosing the correct Apple.</p>
+        </section>
+        <section>
+            <h2>Criteria</h2>
+            <p>
+                There are many different criteria to be considered when choosing an Apple — size, color, firmness, sweetness,
+                tartness...
+            </p>
+        </section>
+        <!--<article> Element:
+                1.Use <article> when you want to mark a piece of content that makes sense on its own, like a complete story, blog post, or news article.
+                2.It's like a standalone unit of content that can be shared or reused independently.
+                3.Include a title (usually using headings like <h1>, <h2>, etc.) to describe the content within the <article>.
+                4.Search engines and screen readers recognize <article> as an important, self-contained part of your webpage.
+            <section> Element:
+                1.Use <section> when you want to group related content together on your webpage.
+                2.It doesn't have to be a complete piece of content on its own; it's like putting content into folders based on topics.
+                3.Include a heading to describe what the grouped content is about, but remember the content inside a <section> might need context from other parts of the page.
+                4.<section> helps organize your webpage into clear sections, making it more structured and easier to understand. -->
+
+
+        <div class="warning">
+            <img src="attechment/leopard.jpg" alt="An intimidating leopard." />
+            <p style="background-color: red;">Beware of the leopard</p>
+        </div>
+            <!--1.<div> contain every thing else than section and article.
+                2.<div> HTML element is the generic container for flow content. 
+                3.It has no effect on the content or layout until styled in some way using CSS.
+                4.It is a block(i.e. create always in the next line | take all space from left to right.)-->
+        
+        <span style="background-color: red;">Beware of the leopard </span>
+        <span style="background-color: blue;">Beware of the leopard </span>
+        <span style="background-color: green;">Beware of the leopard </span>
+        <span style="background-color: yellow;">Beware of the leopard </span>
+        <span style="background-color: pink;">Beware of the leopard </span>
+        <!--Block-Level Elements:
+                1.Structure: Block-level elements create a "block" or a rectangular box in the web page's layout.
+                2.Layout: They typically start on a new line and take up the full width available in their parent container, extending from the left edge to the right edge.
+                3.Examples: Common block-level elements include <div>, <p>, <h1> through <h6>, <ul>, <ol>, <li>, <table>, and <blockquote>.
+            Inline Elements:
+                1.Structure: Inline elements do not create a new block; they flow within the content, usually inside block-level elements.
+                2.Layout: They do not start on a new line and only take up as much width as necessary to accommodate their content.
+                3.Examples: Common inline elements include <span>, <a>, <strong>, <em>, <img>, <br>, and <i>. -->
+
+        <fieldset id="forms">
+            <legend > <h1>Job Application</h1></legend>
+            <form >
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" >
+                <br/>
+                <br/>
+
+                <label for="emailID">E-mail ID:</label>
+                <input type="email" id="emailID" name="emailID" >
+                <br/>
+                <br/>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" >
+                <br/>
+                <br/>
+
+                <label for="gender">Gender:</label>
+
+                <input type="radio" id="male" name="gender" >
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" >
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" >
+                <label for="other">Other</label>
+                <br/>
+                <br/>
+
+                <label for="EdType">Highest Education</label>
+                <select name="EdType" id="EdType">
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="B.tech">B.tech</option>
+                    <option value="M.tech">M.tech</option>
+                    <option value="PDH 1">PDH 1</option>
+                    <option value="PDH 2">PDH 2</option>
+                </select>
+                <br/>
+                <br/>
+
+                <label for="fileUpload">Resume:</label>
+                <input type="file" id="fileUpload" name="fileUpload" >
+                <br/>
+                <br/>
+
+                <label for="counter">Experience (in year):</label>
+                <input type="number" id="counter" name="counter" min="0" max="50">
+                <br/>
+                <br/>
+
+                <fieldset>
+                    <legend>Skill</legend>
+
+                    <label for="checkbox1">HTML:</label>
+                    <input type="checkbox" id="checkbox" name="checkbox1" >
+
+                    <label for="checkbox2">CSS:</label>
+                    <input type="checkbox" id="checkbox" name="checkbox2" >
+
+                    <label for="checkbox3">JavaScript:</label>
+                    <input type="checkbox" id="checkbox" name="checkbox3" >
+                </fieldset>
+
+                <label for="textarea1">Additional Comment:</label><br/>
+                <textarea id="textarea1" name="textarea1" rows="10" cols="100" placeholder="comment Here"></textarea>
+
+                <input type="submit" value="Submit Apllication">
+            </form>
+            <!--The <form> HTML element represents a document section containing interactive controls for submitting information.
+                Attribute:	
+                    1."accept-charset":-Specifies the character encodings used for form submission
+                    2."action":-        Specifies where to send the form-data when a form is submitted
+                    3."autocomplete":-  Specifies whether a form should have autocomplete on or off
+                    4."enctype":-       Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
+                    5."method":-        Specifies the HTTP method to use when sending form-data
+                    6."name":-          Specifies the name of the form
+                    7."novalidate":-    Specifies that the form should not be validated when submitted
+                    8."rel":-           Specifies the relationship between a linked resource and the current document
+                    9."target":-        Specifies where to display the response that is received after submitting the form
+                Tags
+                    1.<form>	Defines an HTML form for user input
+                    2.<input>	Defines an input control
+                        HTML Input Types
+                            <input type="button">
+                            <input type="checkbox">
+                            <input type="color">
+                            <input type="date">
+                            <input type="datetime-local">
+                            <input type="email">
+                            <input type="file">
+                            <input type="hidden">
+                            <input type="image">
+                            <input type="month">
+                            <input type="number">
+                            <input type="password">
+                            <input type="radio">
+                            <input type="range">
+                            <input type="reset">
+                            <input type="search">
+                            <input type="submit">
+                            <input type="tel">
+                            <input type="text">
+                            <input type="time">
+                            <input type="url">
+                            <input type="week">
+                            #Input Restriction on Attribute
+                                1."checked"	    Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio")
+                                2."disabled"	Specifies that an input field should be disabled
+                                3."max"	        Specifies the maximum value for an input field
+                                4."maxlength"	Specifies the maximum number of character for an input field
+                                5."min"	        Specifies the minimum value for an input field
+                                6."pattern"	    Specifies a regular expression to check the input value against
+                                7."readonly"	Specifies that an input field is read only (cannot be changed)
+                                8."required"	Specifies that an input field is required (must be filled out)
+                                9."size"	    Specifies the width (in characters) of an input field
+                                10."step"   	Specifies the legal number intervals for an input field
+                                11."value"  	Specifies the default value for an input field
+                    3.<textarea>	Defines a multiline input control (text area)
+                    4.<label>	Defines a label for an <input> element
+                    5.<fieldset>	Groups related elements in a form
+                    6.<legend>	Defines a caption for a <fieldset> element
+                    7.<select>	Defines a drop-down list
+                    8.<optgroup>	Defines a group of related options in a drop-down list
+                    9.<option>	Defines an option in a drop-down list
+                    10.<button>	Defines a clickable button
+                    11.<datalist>	Specifies a list of pre-defined options for input controls
+                    12.<output>	Defines the result of a calculation -->
+        </fieldset>  
+        
+        <table>
+            <tr>
+                <td>
+                    <audio controls >
+                        <source src="attechment\aud1.mp3" type="audio/mp3">
+                    </audio>
+                    <audio src="attechment/aud2.mp3" controls></audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <video controls >
+                        <source src="attechment\vid1.mp4" type="video/mp4">
+                    </video>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <iframe src="https://www.youtube.com/embed/gGx5KRirets" ></iframe>
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>
